@@ -1,5 +1,5 @@
 
-@media screen {
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -83,4 +83,68 @@ body {
  h4{
     margin-bottom: 30px;
  }
-}
+
+ /* Default styles (for desktop and larger screens) */
+
+ 
+ /* Large devices (desktops) */
+ @media (min-width: 1200px) {
+   body {
+     background-color: papayawhip;
+   }
+ 
+   .container {
+     width: 1140px;
+     margin: 0 auto;
+   }
+ }
+ 
+ /* Medium devices (tablets) */
+ @media (max-width: 1199px) and (min-width: 768px) {
+   body {
+     background-color: papayawhip;
+   }
+ 
+   .container {
+     width: 90%;
+   }
+ 
+   h1 {
+     font-size: 28px;
+   }
+ }
+ 
+ /* Small devices (mobile landscape) */
+ @media (max-width: 767px) and (min-width: 481px) {
+   body {
+     background-color: papayawhip;
+   }
+ 
+   .container {
+     width: 95%;
+   }
+ 
+   h1 {
+     font-size: 24px;
+   }
+ }
+ 
+ /* Extra small devices (mobile portrait) */
+ @media (max-width: 480px) {
+   body {
+     background-color: papayawhip;
+   }
+ 
+   .container {
+     width: 100%;
+   }
+ 
+   h1 {
+     font-size: 20px;
+   }
+ 
+   p {
+     font-size: 14px;
+   }
+ }
+ 
