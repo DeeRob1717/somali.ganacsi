@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharka Ragga ee Casriga ah: Xulashada Wanaagsan</title>
+    <style>
+        body {
+    background-color: #F7E7CE; /* Champagne background */
+    color: #4B0C1B; /* Dark Burgundy text */
+    font-family: 'Georgia', serif;
+    padding: 20px;
+    margin: o;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Modern and readable font */
+    font-size: 3em; /* Large and prominent size */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centered text */
+    color: #2c3e50; /* Dark, elegant color */
+    text-transform: uppercase; /* Make the text all uppercase for emphasis */
+    letter-spacing: 2px; /* Slightly increase space between letters */
+    margin-top: 40px; /* Space above the header */
+    margin-bottom: 20px; /* Space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    line-height: 1.4; /* Adjust line height for readability */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+h1:hover {
+    color: #e74c3c; /* Change color on hover for a dynamic effect */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight movement upwards on hover */
+}
+
+button {
+    background-color: #6A0DAD; /* Royal Purple button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4B0082; /* Dark Purple hover */
+}
+
+       
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            gap: 80px;
+            max-width: 800px; /* Increase container width */
+            margin: 0;
+            padding: 0;
+        }
+
+        .product {
+            background-color: #fff;
+            width: 90%; /* Take up full width available */
+            max-width: 600px; /* Increase product card width */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: left; /* Align text to the left */
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            color:#003366;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font */
+    font-size: 1.125em;  /* Slightly larger text for readability */
+    line-height: 1.6;  /* Space between lines */
+    color: #333;  /* Dark grey text for easy reading */
+    margin: 20px 0;  /* Margin for spacing above and below paragraphs */
+    padding: 10px;  /* Padding inside the paragraph */
+    background-color: #f9f9f9;  /* Light background color */
+    border-left: 5px solid #007bff;  /* Blue left border */
+    text-align: justify;  /* Justify text for a clean look */
+    text-indent: 20px;  /* Indent the first line */
+    letter-spacing: 0.5px;  /* Slightly increased letter spacing */
+    word-spacing: 1px;  /* Adds space between words */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Light text shadow */
+}
+
+.product-image {
+    width: 100%; /* Ensures responsiveness */
+    height: 50%; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover; /* Ensures the image covers the container fully */
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Optional: Add a border or frame around the image */
+.product-image-frame {
+    border: 2px solid #ddd; /* Light border */
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block; /* Contain the image in a block */
+    background-color: #fff; /* White background for a clean look */
+}
+
+footer {
+            background-color: #2c3e50;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 100px;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #3498db;
+        }
+        .social-icons img {
+            width: 25px;
+            margin: 0 10px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5em; /* Adjust header size */
+        margin-top: 30px;
+    }
+
+    .container {
+        padding: 0 10px; /* Padding for better spacing */
+        gap: 50px; /* Reduce gap between items */
+    }
+
+    .product {
+        width: 80%; /* Make product cards take more width */
+        padding: 20px; /* Less padding */
+    }
+
+    .product-image {
+        width: 80%; /* Make product image responsive */
+        height: 20px; /* Maintain aspect ratio */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller header font */
+        margin-top: 20px;
+    }
+  
+
+    .container {
+        padding: 0 5px; /* Reduce padding on smaller screens */
+        gap: 50px;
+    }
+
+    .product {
+        width: 100%; /* Make the product take full width */
+        padding: 15px;
+    }
+
+    .product-image {
+        width: 100%; /* Make product image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    p {
+        font-size: 1em; /* Reduce font size for smaller screens */
+        margin: 15px 0; /* Adjust margin */
+        word-wrap: break-word;
+    }
+
+    button {
+        font-size: 1em; /* Adjust button size for mobile */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+/* For very small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller header font */
+        margin-top: 10px;
+    }
+   
+
+    .container {
+        gap: 30px; /* Reduce gap further */
+    }
+
+    .product {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    p {
+        font-size: 0.9em; /* Further reduce text size */
+        
+    }
+
+    button {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Dharka Ragga ee Casriga ah: Xulashada Wanaagsan</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Hickey Freeman Shalmadda Raaxada leh ee Cashmere Talyaani (66x12 inch)</h2>
+            <img class="product-image" src="img/necktie.jpg" alt="Product Image">
+            <p>Shalmaddan waxay ka samaysan tahay 100% Cashmere Talyaani ah, taasoo ka dhigaysa mid aad u jilicsan oo raaxo leh xilliga jiilaalka. Waxaa loogu talagalay ragga jecel qaabka iyo raaxada isku dhafan.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Gioberti Jaakadda Furan ee Ragga oo leh Xariijinta Flannel-ka ah</h2>
+            <img class="product-image" src="img/sweater.jpg" alt="Product Image">
+            <p>Gioberti cardigan-kan wuxuu leeyahay naqshad knitted ah oo buuxda, oo lagu daray flannel jilicsan oo gudaha ah. Waa mid ku habboon qabowga iyadoo ilaalinaysa muuqaalka xirfadaysan.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Funaanadda Hoodiga ah ee Ragga oo leh Patchwork Jacquard</h2>
+            <img class="product-image" src="img/hoodie.jpg" alt="Product Image">
+            <p>Funaanaddan raaxada leh waxay ku socotaa qaab hoodie ah oo leh naqshad plaid iyo patchwork jacquard, ku habboon maalin kasta iyo xaaladaha nasashada.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Zaitun Hoodiga Dabiiciga ah ee Ragga</h2>
+            <img class="product-image" src="img/hoodytwo.jpg" alt="Product Image">
+            <p>Hoodigan wuxuu leeyahay naqshad fudud oo solid ah oo ka samaysan maaddooyin jilicsan, taasoo ka dhigaysa doorasho fiican oo loogu talagalay xilliyada qabow.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+</div>
+        <div class="card">
+            <h2>COOFANDY Funaanadda Polo-ka ah ee Casriga ah</h2>
+            <img class="product-image" src="img/pololong.jpg" alt="Product Image">
+            <p>Funaanaddan polo ee COOFANDY waxay leedahay gacan-dheer iyo naqshad khafiif ah oo raaxo leh, ku habboon labiska caadiga ah iyo kuwa rasmi ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>5 Funaanadaha T-Shirts ee Dry Fit loogu talagalay Isboortiga</h2>
+            <img class="product-image" src="img/5pack.jpg" alt="Product Image">
+            <p>Setkan wuxuu ka kooban yahay 5 funaanadood oo dry fit ah oo loogu talagalay jimicsiga iyo orodka. Waxay ka hortagayaan qoyaan waxayna bixiyaan raaxo xilliga ciyaaraha.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>7 Funaanadood oo Gacan-Dheer ah oo leh Ilaalinta Qorraxda</h2>
+            <img class="product-image" src="img/sevenpack.jpg" alt="Product Image">
+            <p>Setkan wuxuu bixiyaa 7 funaanadood oo gacan-dheer ah oo si gaar ah loogu talagalay ilaalinta qorraxda (UPF/SPF), ku habboon xaaladaha bannaanka iyo jimicsiga.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Funaanadda Golf-ka ee Ragga</h2>
+            <img class="product-image" src="img/golf.jpg" alt="Product Image">
+            <p>Funaanadda Striped Golf Polo waxay leedahay naqshad gaaban oo gacan-gaaban ah oo leh maaddooyin qoyaan-marin ah, taasoo u habboon ciyaaraha iyo xaaladaha cimilada diiran.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Outdoor Ventures Vest-ga Qabowga ee Ragga</h2>
+            <img class="product-image" src="img/menvest.jpg" alt="Product Image">
+            <p>Vest-kan fudud oo dabayl-caddeed ah wuxuu leeyahay dahaarka fleece-ka ah, kaasoo ku habboon ciyaaraha golf-ka iyo howlaha bannaanka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>WULFUL Jaakadda Xafladaha iyo Meheradaha ee Ragga</h2>
+            <img class="product-image" src="img/wulful.jpg" alt="Product Image">
+            <p>Setkan slim-fit ee saddex-geesoodka ah (jaakadda, vest, iyo surwaalka) ayaa ku habboon xafladaha aroosyada iyo kulamada ganacsiga, isagoo ka dhigay xulashada ugu fiican ee rasmi ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dharka Ragga. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

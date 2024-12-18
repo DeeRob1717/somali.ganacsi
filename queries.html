@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SooDejin Global</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+
+.video-section {
+            position: relative;
+        }
+
+        .background-video {
+            width: 100%;
+            height: auto;
+        }
+       
+        .hero-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+.image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .image-text a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .image-container:hover .image-text {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Title Section -->
+    <div class="title">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        SooDejin Global
+    </div>
+
+    <!-- Header Section with Tabs -->
+    <header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#guriga.html">Guriga</a></li>
+                <li><a href="#jikada.html">Jikada</a></li>
+                <li><a href="#beerta.html">Kabaha</a></li>
+                <li><a href="#miiska.html">Miiska</a></li>
+                <li><a href="#dharka.html">Dharka</a></li>
+                <li><a href="#elektirooniga.html">Elektiroonigga</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="assets/video.mp4" type="video/mp4">
+            <source src="assets/video.webm" type="video/webm">
+            <source src="assets/video.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <p>Farxad Iyo Nabad Qurux Badan Ayaa Kuu Sugaya</p>
+            <p><a href="elektirooniga.html">Iibso hadda</a></p>
+        </div>
+    </section>
+
+    <!-- Hero Message -->
+    <div class="hero-message">
+        Haye! Dukaanashada way fududaaday—oo weliba aad u xiiso badan. Waxaan kuu haynaa heshiisyo cajiib ah, alaabooyin gaar ah oo aan meel walba laga heli karin, iyo gaarsiin degdeg ah si maalintaadu u fiicnaato. Alaabooyin waaweyn ayaa kuu diyaarsan.<br><br>
+        Haddaba, isku bixi—waad u qalantaa!
+    </div>
+
+    <!-- Image Grid Section -->
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="img/kitchen.jpeg" alt="Kitchen">
+            <div class="image-text"><a href="jikada.html">Jikada</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/coffee.jpeg" alt="Coffee">
+            <div class="image-text"><a href="miiska.html">Miiska</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/home.png" alt="Home">
+            <div class="image-text"><a href="guriga.html">Guriga</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/image.png" alt="Image">
+            <div class="image-text"><a href="elektirooniga.html">Elektiroonigga</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/tshirt.jpeg" alt="T-shirt">
+            <div class="image-text"><a href="dharka.html">Dharka</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/shoes.jpg" alt="Shoes">
+            <div class="image-text"><a href="kabaha.html">Kabaha</a></div>
+        </div>
+    </div>
+
+    <!-- Motivating Message Section -->
+    <div class="motivating-message">
+      
+        <p>
+            Noloshu waa safar ay fursado aan dhammaad lahayn buuxaan, tallaabo kasta oo aad qaado waxay ku soo dhoweyneysaa riyadaada. 
+            Ku qanac caqabadaha, ku farax guulaha, oo xusuuso in dulqaadka iyo xamaasadu ay yihiin saaxiibbadaada ugu weyn. 
+            Maanta waa maalin cusub oo aad hore ugu socoto, xitaa haddii horumarku yar yahay. Sii wad socodka—waxaad awood u leedahay waxyaabo waaweyn!
+        </p>
+    </div>
+
+    <!-- Full-width Image Section -->
+    <div>
+        <img src="img/natural.jpeg" alt="Natural Landscape" class="full-width-image">
+    </div>
+
+    </div>
+    <!-- Gratitude Message -->
+    <div class="hero-message">
+        Waxaan si niyad sami leh ugu mahadcelinayaa dhammaan booqdayaasha boggayga. Soo dhowow mar walba oo ku mahadsanid wakhtigaaga aad noogu qaadatay inaad halkan ku booqato. Aad ayaad noogu qaali tahay, waana ku faraxsanahay inaad halkaan nala joogto! ❤
+    </div>
+
+     <!-- Video Footage Section -->
+     <div>
+        <video autoplay muted loop playsinline width="100%">
+            <source src="assets/waste.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <h2>Nala Soo Xiriir</h2>
+        <ul>
+            <li>Email: contact@soodejin.com</li>
+            <li>Phone: +252 123 456 789</li>
+            <li>Address: Mogadishu, Somalia</li>
+        </ul>
+    </div>
+
+     <!-- Email Subscription Section -->
+     <div class="subscription-section">
+        <h2>Kusoo Biir Liiska Email-ka</h2>
+        <form class="subscription-form">
+            <input type="email" placeholder="Email-kaaga geli" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    
+
+   
+
+    
+
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SooDejin Global. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu on small screens when the menu icon is clicked
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.getElementById('nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

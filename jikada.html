@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabta Jikada Casriga ah: Alaabo Wanaagsan oo Jikadaada Ugu Habboon</title>
+    <style>
+     ::before,
+::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+       body {
+    background-color: #F7E7CE; /* Champagne background */
+    color: #4B0C1B; /* Dark Burgundy text */
+    font-family: 'Georgia', serif;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Modern and readable font */
+    font-size: 3em; /* Large and prominent size */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centered text */
+    color: #2c3e50; /* Dark, elegant color */
+    text-transform: uppercase; /* Make the text all uppercase for emphasis */
+    letter-spacing: 2px; /* Slightly increase space between letters */
+    margin-top: 40px; /* Space above the header */
+    margin-bottom: 20px; /* Space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    line-height: 1.4; /* Adjust line height for readability */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+h1:hover {
+    color: #e74c3c; /* Change color on hover for a dynamic effect */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight movement upwards on hover */
+}
+
+button {
+    background-color: #6A0DAD; /* Royal Purple button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4B0082; /* Dark Purple hover */
+}
+
+       
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            gap: 50px;
+            max-width: 100%; /* Increase container width */
+            padding: 0 10px;
+        }
+
+        .product {
+            background-color: #fff;
+            width: 100%; /* Take up full width available */
+            max-width: 600px; /* Increase product card width */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: left; /* Align text to the left */
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            color:#003366;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font */
+    font-size: 1.125em;  /* Slightly larger text for readability */
+    line-height: 1.6;  /* Space between lines */
+    color: #333;  /* Dark grey text for easy reading */
+    margin: 20px 0;  /* Margin for spacing above and below paragraphs */
+    padding: 10px;  /* Padding inside the paragraph */
+    background-color: #f9f9f9;  /* Light background color */
+    border-left: 5px solid #007bff;  /* Blue left border */
+    text-align: justify;  /* Justify text for a clean look */
+    text-indent: 20px;  /* Indent the first line */
+    letter-spacing: 0.5px;  /* Slightly increased letter spacing */
+    word-spacing: 1px;  /* Adds space between words */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Light text shadow */
+}
+
+.product-image {
+    width: 100%; /* Ensures responsiveness */
+    height: 50%; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover; /* Ensures the image covers the container fully */
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Optional: Add a border or frame around the image */
+.product-image-frame {
+    border: 2px solid #ddd; /* Light border */
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block; /* Contain the image in a block */
+    background-color: #fff; /* White background for a clean look */
+}
+
+footer {
+            background-color: #2c3e50;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 100px;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #3498db;
+        }
+        .social-icons img {
+            width: 25px;
+            margin: 0 10px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5em; /* Adjust header size */
+        margin-top: 30px;
+    }
+
+    .container {
+        padding: 0 10px; /* Padding for better spacing */
+        gap: 50px; /* Reduce gap between items */
+    }
+
+    .product {
+        width: 80%; /* Make product cards take more width */
+        padding: 20px; /* Less padding */
+    }
+
+    .product-image {
+        width: 80%; /* Make product image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller header font */
+        margin-top: 20px;
+        
+    }
+  
+
+    .container {
+        padding: 0 5px; /* Reduce padding on smaller screens */
+        gap: 40px;
+    }
+
+    .product {
+        width: 100%; /* Make the product take full width */
+        padding: 15px;
+    }
+
+    .product-image {
+        width: 80%; /* Make product image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    p {
+        font-size: 1em; /* Reduce font size for smaller screens */
+        margin: 15px 0; /* Adjust margin */
+        
+    }
+
+    button {
+        font-size: 1em; /* Adjust button size for mobile */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+/* For very small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller header font */
+        margin-top: 10px;
+    }
+   
+
+    .container {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .product {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    p {
+        font-size: 0.9em; /* Further reduce text size */
+        
+    }
+
+    button {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+}
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Alabta Jikada Casriga ah: Alaabo Wanaagsan oo Jikadaada Ugu Habboon</h1>
+    <div class="container">
+        <div class="product-card">
+            <h2>Setka Mindiyada Jikada ee Xirfadlayaasha ah (Starry Sky Series)</h2>
+            <img class="product-image" src="img/knifeset.webp" alt="Product Image">
+            <p>Setkan mindiyada jikada wuxuu ka kooban yahay 15 xabbo oo ah midiyo birta Jarmalka ah ee aan miridhku gelin. Waxaa lagu soo sameeyay naqshad hal-xabbo ah oo xooggan, waxaana lagu daray dhagax fuuqiso si ay mar walba fiiqan u ahaadaan. Waa doorasho ku habboon jikada casriga ah oo tayo sare leh oo loogu talagalay xirfadlayaasha iyo kuwa guryaha isticmaala labadaba.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>>FOORNO KORONTO OO LA GELIN KARO DARBIGA (AMZCHEF 24")</h2>
+            <img class="product-image" src="img/wallcooker.jpg" alt="Product Image">
+            <p>Foorno casri ah oo koronto ah oo leh 11 hawl shaqo, 8 cunto otomaatik ah, iyo awood 2800W. Waxay leedahay naqshad ammaan ah oo xakamayn leh, shaashad taabasho, iyo wakhti habeennimo. Waa doorasho ku habboon kuwa raadinaya foorno tayo sare leh oo ku habboon makaanikada iyo naqshadda gurigaaga.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>DIGSIGA LABADA-DABOOLKA LEH EE CAST IRON (Lodge 5 qt)</h2>
+            <img class="product-image" src="img/oven.jpg" alt="Product Image">
+            <p>Digsigan oo ka samaysan bir culus oo horey loo nadiifiyay waa mid waara oo ku habboon dubista iyo karinta cuntooyinka adag. Labada dabool oo ku jira waxay kuu oggolaanayaan isticmaal badan, waxayna leeyihiin gacmo-loop oo fududeeya qabashada.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>MAKHIINKA KAFOGA KEURIG K-DUO</h2>
+            <img class="product-image" src="img/keurigcoffee.webp" alt="Product Image">
+            <p>Keurig K-Duo waa mashiin kafee oo isku daraya laba adeeg—K-Cup iyo Carafe. Waxay bixisaa cabbirro kala duwan oo brew ah, haan biyo oo la saari karo oo 60oz ah, iyo hawlo barnaamij otomaatik ah. Waa xalka ugu habboon ee dadka jecel kafada xirfadlayaasha ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>FURNO PIZZA OO KORONTO AH (Heats up to 840℉)</h2>
+            <img class="product-image" src="img/pizzaoven.webp" alt="Product Image">
+            <p>Naqshaddan wax ku oolka ah ee foorno koronto ayaa kuu oggolaaneysa inaad ku dubto pizzas 12-inch ah laba daqiiqo gudahood. Waxay la socotaa 6 qaab oo presets ah, dhagax dubis, qalab jarjaris, iyo peel. Waxay ku habboon tahay dadka jecel inay cunto degdeg ah oo macaan ku diyaarsadaan guriga.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>MAKHIINKA EXPRESSO EE BREVILLE BES870XL</h2>
+            <img class="product-image" src="img/coffee.webp" alt="Product Image">
+            <p>Mashiinka Espressada Breville waa mashiin xirfad leh oo loogu talagalay diyaarinta cabbitaanno kafee oo heer sare ah. Waxay leedahay naqshad bir ah oo dhalaalaya, shaandheyn otomaatig ah, iyo halbeeg wax soo saar sax ah oo ka dhigaya mid ku habboon isticmaalka guriga iyo ganacsiga.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>NINJA BLENDER IYO MASHIINKA CUNTO GOYNTA (SS401)</h2>
+            <img class="product-image" src="img/blender.jpg" alt="Product Image">
+            <p>Blender-kan iyo mashiinka cuntada Ninja waxay bixiyaan awood sare oo lagu farsameeyo cuntooyinka. Waxay la socotaa 6 hawlood oo loogu talagalay isku dhafka, kala-goynta, iyo diyaarinta cabbitaannada caafimaadka leh. Waxay ku jiraan 72oz weel quraarad ah iyo koobabka safarka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>MASHIINKA CUNTADA KALA-QASAYA AUCMA 6.5-QT</h2>
+            <img class="product-image" src="img/aucma.jpg" alt="Product Image">
+            <p>Mashiinkan kala-qasaha Aucma wuxuu ku yimaadaa awood sare (660W) iyo naqshad madax-tilt ah. Waxaa lagu soo daray qalab kala duwan sida hook, whip, iyo beater. Waa doorasho ku habboon dadka jecel diyaarinta cuntooyinka caafimaadka leh iyo macmacaanka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>MASHIINKA KOKTEYLKA BARTESIAN</h2>
+            <img class="product-image" src="img/kartesian.jpg" alt="Product Image">
+            <p>Bartesian waa mashiin casri ah oo si otomaatig ah ugu diyaariya cabbitaanno kokteyl ah. Waxay la socotaa 5 dhalo quraarado ah oo loogu talagalay isku-dhafka cabbitaannada qaab xirfadle ah. Waa xal ku habboon dabaaldegyada iyo kulamada.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="product-card">
+            <h2>MAKHIINKA ROOTIGA EE CUISINART</h2>
+            <img class="product-image" src="img/breadmaker.webp" alt="Product Image">
+            <p>Mashiinkan rootiga ee otomaatiga ah wuxuu diyaariyaa rooti cabbirro kala duwan oo ilaa 2lbs ah. Waxay leedahay dejinyo gaar ah oo la habeyn karo si loogu diyaariyo rooti cusub iyo midyo kale oo caafimaad leh gurigaaga.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dharka Ragga. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

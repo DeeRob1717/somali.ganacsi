@@ -1,147 +1,708 @@
 <!DOCTYPE html>
 <html lang="so">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hordhac ku Saabsan Ganacsiga Dhoofinta iyo Soo Dejinta ee Soomaaliya</title>
+    <title>SooDejin Global</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            line-height: 1.6;
-            color: #333;
+            box-sizing: border-box;
         }
-        nav {
-            width: 250px;
-            background-color: #2c3e50;
-            color: #fff;
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f6f3;
+            color: #232323;
         }
-        nav h2 {
+
+        /* Title Section */
+        .title {
+            background-color: #f9f4e8; /* Cream color */
             text-align: center;
             padding: 20px;
-            background-color: #34495e;
-            margin: 0;
-            font-size: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #232323;
+            margin-left: 60px; /* Adjust title to accommodate menu icon */
         }
+
+        /* Header Section with Tabs */
+        header {
+            background-color: #f9f4e8; /* Cream color */
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative; /* To position the menu icon */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the header content */
+            z-index: 5;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .image-text a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .image-container:hover .image-text {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .menu-icon {
+    display: none;
+}
+
         nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #232323;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-family: 'Lato', sans-serif;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #c9c5be;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-text {
+            position: absolute;
+            bottom: 150px;
+            left: 50px;
+            color: white;
+            z-index: 10;
+            text-align: left;
+            padding: 20px;
+            font-family: 'Playfair Display', serif;
+            width: 35%;
+            line-height: 1.6;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        .hero-text p {
+    font-size: 2.5rem; /* Larger font size for hero section */
+    font-weight: bold; /* Bold to make the message more impactful */
+    color: #f9f4e8; /* Light color for the hero section text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding a text shadow to enhance readability on the background */
+    line-height: 1.4; /* A bit tighter line height for better visual appeal */
+}
+
+/* Hero Section Links */
+.hero-text p a {
+    color: #f9f4e8;  /* Light color for the hero section link */
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.hero-text p a:hover {
+    color: #c9c5be;  /* Soft cream on hover */
+    text-decoration: underline;
+}
+
+
+
+       
+
+        .hero-message {
+            text-align: center;
+            background-color: #f9f4e8;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-family: 'Lato', sans-serif;
+            color: #232323;
+            margin-top: 20px;
+        }
+
+
+        
+        /* Full-width Image Section */
+        .full-width-image {
+            width: 100%;
+            height: 750px;
+            object-fit: cover;
+
+        }
+        /* Motivating Message Section */
+        .motivating-message {
+            margin: 40px 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-family: 'Lato', sans-serif;
+            color: #232323;
+        }
+
+                /* Contact Us Section Styling */
+                .contact-section {
+            background-color: #f9f4e8;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #232323;
+            margin-bottom: 20px;
+        }
+
+        .contact-section ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             list-style: none;
             padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            border-bottom: 1px solid #34495e;
-        }
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            display: block;
-            padding: 15px 20px;
-            transition: background-color 0.3s ease;
-        }
-        nav ul li a:hover {
-            background-color: #1abc9c;
-        }
-        main {
-            margin-left: 250px;
-            padding: 20px;
-            flex-grow: 1;
-        }
-        header {
-            background-color: #34495e;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h3 {
             margin-top: 20px;
-            color: #34495e;
         }
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
+        .contact-section li {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #c9c5be;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        ul li {
-            margin-bottom: 10px;
+
+        .contact-section li:hover {
+            background-color: #a8a599;
+        }
+
+        /* Subscription Section Styling */
+        .subscription-section {
+            background-color: #f9f4e8;
+            padding: 50px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .subscription-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #232323;
+            margin-bottom: 20px;
+        }
+
+        .subscription-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .subscription-form input[type="email"] {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border: 2px solid #c9c5be;
+            border-radius: 5px;
+            outline: none;
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .subscription-form button {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            background-color: #c9c5be;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .subscription-form button:hover {
+            background-color: #a8a599;
+        }
+
+         /* Footer Section Styling */
+         footer {
+            background-color: #232323;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #c9c5be;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* General Link Styling */
+a {
+    text-decoration: none;
+    color: #232323;  /* Dark text for good contrast */
+    font-weight: 600;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+a:hover {
+    color: #c9c5be;  /* Soft cream color on hover */
+    text-decoration: underline;
+    letter-spacing: 1px;  /* Slight letter-spacing to add elegance */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Header Links */
+header nav a {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+}
+
+header nav a:hover {
+    background-color: #f9f4e8; /* Subtle background change */
+    color: #232323; /* Maintain dark color on hover for visibility */
+}
+
+
+
+
+/* Footer Links */
+footer a {
+    color: #c9c5be;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #f9f4e8;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.125em;  /* Slightly larger text for readability */
+    line-height: 1.6;  /* Space between lines */
+    color: #333;  /* Dark grey text for easy reading */
+    margin: 20px 0;  /* Margin for spacing above and below paragraphs */
+    padding: 10px;  /* Padding inside the paragraph */
+    background-color: #f9f9f9;  /* Light background color */
+    border-left: 5px solid #007bff;  /* Blue left border */
+    text-align: justify;  /* Justify text for a clean look */
+    text-indent: 20px;  /* Indent the first line */
+    letter-spacing: 0.5px;  /* Slightly increased letter spacing */
+    word-spacing: 1px;  /* Adds space between words */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Light text shadow */
+}
+
+.hero-paragraph {
+    font-size: 2.5rem; /* Larger font size for hero section */
+    font-weight: bold; /* Bold for emphasis */
+    color: #f9f4e8; /* Light color for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding a text shadow */
+    line-height: 1.4; /* Tighter line height */
+    background-color: transparent; /* Remove background color */
+    border-left: none; /* Remove the left border */
+}
+
+/* Hero Links */
+.hero-paragraph a {
+    color: #f9f4e8;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.hero-paragraph a:hover {
+    color: #c9c5be; /* Soft cream on hover */
+    text-decoration: underline;
+}
+
+
+
+
+
+.motivating-message p {
+    font-size: 1.5rem; /* Larger font size for motivating message */
+    color: #232323; /* Dark text for contrast */
+    line-height: 1.6; /* Slightly increased line height for better readability */
+}
+.gratitude-message p {
+    font-size: 1.5rem; /* Larger font size for gratitude message */
+    font-family: 'Playfair Display', serif; /* Elegant serif font for a graceful look */
+    color: #4f4f4f; /* Soft grey for a more elegant tone */
+    line-height: 1.7; /* Adding more space between lines */
+    font-style: italic; /* Italics for a more formal touch */
+}
+
+
+
+
+
+
+
+
+        
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.8rem;
+                margin-left: 40px;
+            }
+            body, html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+            .menu-icon {
+                display: block;
+                font-size: 2rem;
+                padding: 8px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #f9f4e8;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+                z-index: 1;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-text p {
+        font-size: 1.8rem; /* Smaller font size */
+        line-height: 1.3; /* Adjust line-height for readability */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+    .motivating-message p {
+        font-size: 1rem; /* Reduce font size */
+        line-height: 1.4;
+    }
+
+    .subscription-section h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .subscription-form input[type="email"] {
+        font-size: 0.9rem; /* Smaller font size for email input */
+        width: 250px; /* Limit input width */
+    }
+
+    .subscription-form button {
+        font-size: 0.9rem; /* Smaller button text */
+    }
+    .footer p {
+        font-size: 0.9rem; /* Reduce footer text size */
+    }
+
+        }
+
+       
+
+
+        @media (max-width: 480px) {
+            .menu-icon {
+                display: block;
+                font-size: 1.8rem;
+                top: 10px;
+                left: 10px;
+                padding: 4px 8px;
+                background-color: #f9f4e8;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .title {
+                font-size: 1.5rem;
+                padding: 10px;
+                text-align: left;
+                padding-bottom: 0;
+            }
+       
+
+            nav ul {
+                width: 100%;
+                background-color: #f9f4e8;
+                padding: 10px 0;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                padding: 8px 0;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-text p {
+        font-size: 1.8rem; /* Smaller font size for hero text */
+        line-height: 1.3; /* Adjust line-height for readability */
+    }
+    .motivating-message p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.3;
+    }
+
+    .full-width-image {
+        height: 450px; /* Reduced image height */
+    }
+
+    .footer p {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+
+    .subscription-section h2 {
+        font-size: 1.8rem; /* Smaller subscription section title */
+    }
+    .subscription-form input[type="email"] {
+        font-size: 0.9rem; /* Smaller font size for email input */
+        width: 200px; /* Smaller input width */
+    }
+
+    .subscription-form button {
+        font-size: 0.9rem; /* Smaller button text */
+    }
+
         }
     </style>
 </head>
+
 <body>
-    <nav>
-        <h2>Liiska Bogagga</h2>
-        <ul>
-            <li><a href="suuqyada-caalamiga.html">Suuqyada Caalamiga ah ee Badeecadaha Soomaaliya</a></li>
-            <li><a href="alaab-qeybiyeyaal.html">Sida Loo Helo Alaab-qeybiyeyaal Kalsoonida Leh</a></li>
-            <li><a href="alaabada-ugu-wanaagsan.html">Sida Loo Soo Xusho Alaabada Ugu Wanaagsan</a></li>
-            <li><a href="badeecadaha.html">Badeecadaha ugu Waaweyn ee Dhoofinta/Dalabka</a></li>
-            <li><a href="caqabadaha.html">Caqabadaha iyo Sida Looga Gudbo</a></li>
-            <li><a href="cashuuraha.html">Cashuuraha iyo Canshuuraha Badeecadaha</a></li>
-            <li><a href="doorka-kastamka.html">Doorka Kastamka ee Ganacsiga</a></li>
-            <li><a href="falanqaynta-tartanka.html">Falanqaynta Tartanka ee Soomaaliya</a></li>
-            <li><a href="heshiisyada-ganacsiga.html">Heshiisyada Ganacsiga Xor ah</a></li>
-            <li><a href="isbedelada-ganacsiga.html">Isbedelada Ganacsiga iyo Fursadaha</a></li>
-            <li><a href="qorshe-ganacsi.html">Qorshe Ganacsi oo Loogu Talagalay Soo-dejinta iyo Dhoofinta</a></li>
-            <li><a href="ruqsadda-ganacsiga.html">Ruqsadda Ganacsiga</a></li>
-            <li><a href="sharciga-ganacsiga.html">Sharciga Ganacsiga</a></li>
-            <li><a href="shirkadaha-maraakiibta.html">Shirkadaha Maraakiibta ee Ugu Habboon</a></li>
-            <li><a href="shirkadaha.html">Shirkadaha Maraakiibta ee Soomaaliya</a></li>
-            <li><a href="talabooyinka.html">Talaabooyinka Muhiimka ah ee Ganacsiga</a></li>
-        </ul>
-    </nav>
-    <main>
-        <header>
-            <h1>Hordhac ku Saabsan Ganacsiga Dhoofinta iyo Soo Dejinta ee Soomaaliya</h1>
-        </header>
-        <section>
-            <p>Soomaaliya, oo ku taal Geeska Afrika, waxay leedahay goob istiraatiiji ah oo isku xirta Afrika, Bariga Dhexe, iyo Aasiya, iyadoo leh xeebta ugu dheer qaaradda Afrika oo ku teedsan Badweynta Hindiya iyo Gacanka Cadmeed. Tan iyo qarniyo badan, Soomaaliya waxay ahayd xarun muhiim ah oo ganacsi, iyadoo ganacsigeedu door weyn ka ciyaaray kobcinta dhaqaalaha dalka.</p>
+    <!-- Title Section -->
+    <div class="title">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        SooDejin Global
+    </div>
 
-            <p>In kasta oo ay jiraan caqabado ay ka mid yihiin xasillooni darro siyaasadeed iyo horumar la&#39;aanta kaabayaasha dhaqaalaha, Soomaaliya ayaa wali leh fursado badan oo ay ku horumarin karto ganacsiga dhoofinta iyo soo dejinta. Qormadan ayaa ka hadli doonta hordhaca ganacsiga dhoofinta iyo soo dejinta ee Soomaaliya, iyadoo lagu eegi doono qaybaha muhiimka ah, fursadaha jira, iyo caqabadaha ku gedaaman.</p>
-
-            <h3>Doorka Ganacsiga Dhoofinta iyo Soo Dejinta ee Dhaqaalaha Soomaaliya</h3>
-            <p>Dhaqaalaha Soomaaliya wuxuu ku tiirsan yahay soo dejinta badeecooyin muhiim ah oo lagu daboolo baahiyaha dalka, maadaama uu aad u hooseeyo awoodda wax-soo-saarka gudaha iyo warshadaha. Dhanka dhoofinta, Soomaaliya waxay ku tiirsan tahay khayraadkeeda dabiiciga ah, gaar ahaan xoolaha iyo wax-soo-saarka beeraha, si ay ugu ganacsato suuqyada caalamka.</p>
-
-            <p>Ganacsiga dhoofinta iyo soo dejinta ayaa door muhiim ah ka ciyaara xasilloonida dhaqaalaha Soomaaliya, isagoo abuuraya fursado shaqo, kordhinaya dakhliga, iyo dhiirrigelinaya kobaca dhaqaalaha.</p>
-
-            <h3>Badeecooyinka Ugu Muhiimsan ee Soomaaliya Soo Dejiso</h3>
+    <!-- Header Section with Tabs -->
+    <header>
+        <nav id="nav">
             <ul>
-                <li><strong>Raashinka iyo Cabitaanka:</strong> Raashinka daruuriga ah sida bariiska, sonkorta, burka, iyo saliidda cuntada ayaa ah badeecooyinka ugu badan ee la soo dejiyo, maadaama Soomaaliya aysan ku filneyn wax-soo-saarka cunnada.</li>
-                <li><strong>Shidaalka iyo Tamarta:</strong> Badeecooyinka shidaalka sida naaftada, baatroolka, iyo kerosinka ayaa aad loogu baahan yahay si loo daboolo baahiyaha tamarta dalka.</li>
-                <li><strong>Mashiinada iyo Qalabka Warshadaha:</strong> Mashiinada culus, baabuurta, iyo qalabka korontada ayaa si joogto ah loo soo dejiyo si loogu adeegsado mashaariicda dhismaha iyo horumarinta.</li>
-                <li><strong>Alaabada Macaamiisha:</strong> Dharka, elektarooniga, iyo qalabka dhismaha ayaa sidoo kale ka mid ah badeecooyinka laga soo dejiyo dibadda.</li>
+                <li><a href="guriga.html">Guriga</a></li>
+                <li><a href="jikada.html">Jikada</a></li>
+                <li><a href="beerta.html">Kabaha</a></li>
+                <li><a href="miiska.html">Miiska</a></li>
+                <li><a href="dharka.html">Dharka</a></li>
+                <li><a href="elektirooniga.html">Elektiroonigga</a></li>
             </ul>
+        </nav>
+        
 
-            <h3>Badeecooyinka Ugu Muhiimsan ee Soomaaliya Dhoofiso</h3>
-            <ul>
-                <li><strong>Xoolaha Nool:</strong> Soomaaliya waa mid ka mid ah dalalka ugu waaweyn ee xoolaha nool dhoofiya, iyadoo ay ugu badan yihiin geela, ariga, iyo adhiga oo loo iib geeyo dalalka Bariga Dhexe sida Sacuudiga, Cumaan, iyo Imaaraadka Carabta.</li>
-                <li><strong>Mooska:</strong> Taariikh ahaan, Soomaaliya waxay ahayd dal hormuud u ah dhoofinta mooska Afrika, waxaana socda dadaallo dib loogu soo nooleynayo qeybtaas ganacsi.</li>
-                <li><strong>Fooxa iyo Malmalka:</strong> Dhirtan ka baxda Soomaaliya waxay soo saartaa fooxa iyo malmalka oo loo dhoofiyo suuqyada caalamka, gaar ahaan kuwa loo adeegsado cadarka, daawooyinka, iyo carfisada.</li>
-                <li><strong>Kalluunka:</strong> Xeebta dheer ee Soomaaliya waxay leedahay khayraad kalluumeysi oo ballaaran, iyadoo kalluunka noocyadiisa kala duwan, sida tuna-ha, loo dhoofiyo dalalka gobolka iyo kuwa caalamka.</li>
-            </ul>
+    </header>
 
-            <h3>Fursadaha Ku Jira Ganacsiga Dhoofinta iyo Soo Dejinta</h3>
-            <ul>
-                <li><strong>Goob Istiraatiiji ah:</strong> Soomaaliya waxay ku taallaa meel istiraatiiji ah, taasoo sahleysa in la helo suuqyada dhoofinta ee Bariga Dhexe iyo Asia.</li>
-                <li><strong>Dhismayaasha Kaabayaasha Dhaqaalaha:</strong> Waxaa jira fursado la xiriira horumarinta kaabayaasha dhaqaalaha sida dekedaha, garoomada diyaaradaha, iyo waddooyinka, kuwaas oo sahli kara ganacsiga dhoofinta iyo soo dejinta.</li>
-                <li><strong>Dhiirrigelinta Ganacsiga:</strong> Dowladda Soomaaliya iyo hay&#39;adaha caalamiga ah waxay bixiyaan fursado dhaqaale iyo taageero si loo dhiirrigeliyo ganacsiga iyo maal-gashiga.</li>
-            </ul>
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="assets/video.mp4" type="video/mp4">
+            <source src="assets/video.webm" type="video/webm">
+            <source src="assets/video.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <p class="hero-paragraph">Farxad Iyo Nabad Qurux Badan Ayaa Kuu Sugaya</p>
+            <p class="hero-paragraph"><a href="elektirooniga.html">Iibso hadda</a></p>
+        </div>
+    </section>
 
-            <h3>Caqabadaha Ganacsiga Dhoofinta iyo Soo Dejinta</h3>
-            <ul>
-                <li><strong>Xasillooni Darro Siyaasadeed:</strong> Soomaaliya oo la daalaa dhacaysa xasillooni darro siyaasadeed ayaa keeni karta caqabado ku saabsan ganacsiga, gaar ahaan xagga amniga iyo shuruucda ganacsiga.</li>
-                <li><strong>Kaabayaasha Dhaqaale:</strong> Haddii aysan si wanaagsan loo maamulayn kaabayaasha dhaqaalaha, sida dekedaha, garoomada diyaaradaha, iyo waddooyinka, waxay saameyn ku yeelan kartaa dheelitirka iyo wax soo saarka ganacsiga.</li>
-                <li><strong>Caafimaadka iyo Dabeecadaha Cimilada:</strong> Caabuqyada caafimaadka iyo xaaladaha cimilada ee aan joogtada ahayn waxay keeni karaan caqabado ku saabsan dhoofinta iyo soo dejinta badeecadaha.</li>
-            </ul>
+    <!-- Hero Message -->
+    <div class="hero-message">
+       <p> Haye! Dukaanashada way fududaaday—oo weliba aad u xiiso badan. Waxaan kuu haynaa heshiisyo cajiib ah, alaabooyin gaar ah oo aan meel walba laga heli karin, iyo gaarsiin degdeg ah si maalintaadu u fiicnaato. Alaabooyin waaweyn ayaa kuu diyaarsan.<br><br>
+        Haddaba, isku bixi—waad u qalantaa!</p>
+    </div>
 
-            <p>Waxaa muhiim ah in la fahmo dhammaan dhinacyada ganacsiga dhoofinta iyo soo dejinta ee Soomaaliya si loo helo guul iyo horumar waara. Fursadaha waxay jiraan, laakiin si loo gaaro guul, waxaa loo baahan yahay dadaal dheeri ah oo looga gudbo caqabadaha jira.</p>
-        </section>
-    </main>
+    <!-- Image Grid Section -->
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="img/kitchen.jpeg" alt="Kitchen">
+            <div class="image-text"><a href="jikada.html">Jikada</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/coffee.jpeg" alt="Coffee">
+            <div class="image-text"><a href="miiska.html">Miiska</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/home.png" alt="Home">
+            <div class="image-text"><a href="guriga.html">Guriga</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/image.png" alt="Image">
+            <div class="image-text"><a href="elektirooniga.html">Elektiroonigga</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/tshirt.jpeg" alt="T-shirt">
+            <div class="image-text"><a href="dharka.html">Dharka</a></div>
+        </div>
+        <div class="image-container">
+            <img src="img/shoes.jpg" alt="Shoes">
+            <div class="image-text"><a href="beerta.html">Kabaha</a></div>
+        </div>
+    </div>
+
+    <!-- Motivating Message Section -->
+    <div class="motivating-message">
+      
+        <p>
+            Noloshu waa safar ay fursado aan dhammaad lahayn buuxaan, tallaabo kasta oo aad qaado waxay ku soo dhoweyneysaa riyadaada. 
+            Ku qanac caqabadaha, ku farax guulaha, oo xusuuso in dulqaadka iyo xamaasadu ay yihiin saaxiibbadaada ugu weyn. 
+            Maanta waa maalin cusub oo aad hore ugu socoto, xitaa haddii horumarku yar yahay. Sii wad socodka—waxaad awood u leedahay waxyaabo waaweyn!
+        </p>
+    </div>
+
+    <!-- Full-width Image Section -->
+    <div>
+        <img src="img/natural.jpeg" alt="Natural Landscape" class="full-width-image">
+    </div>
+
+    </div>
+    <!-- Gratitude Message -->
+    <div class="hero-message">
+        <p>Waxaan si niyad sami leh ugu mahadcelinayaa dhammaan booqdayaasha boggayga. Soo dhowow mar walba oo ku mahadsanid wakhtigaaga aad noogu qaadatay inaad halkan ku booqato. Aad ayaad noogu qaali tahay, waana ku faraxsanahay inaad halkaan nala joogto! ❤</p>
+    </div>
+
+     <!-- Video Footage Section -->
+     <div>
+        <video autoplay muted loop playsinline width="100%">
+            <source src="assets/waste.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+     <!-- Email Subscription Section -->
+     <div class="subscription-section">
+        <h2>Kusoo Biir Liiska Email-ka</h2>
+        <form class="subscription-form">
+            <input type="email" placeholder="Email-kaaga geli" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    
+
+   
+
+    
+
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SooDejin Global. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu on small screens when the menu icon is clicked
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.getElementById('nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+

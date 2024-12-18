@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaabta Guriga ee Casriga ah: Xulashooyin Qurux Badan</title>
+    <style>
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+       body {
+    background-color: #F7E7CE; /* Champagne background */
+    color: #4B0C1B; /* Dark Burgundy text */
+    font-family: 'Georgia', serif;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Modern and readable font */
+    font-size: 3em; /* Large and prominent size */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centered text */
+    color: #2c3e50; /* Dark, elegant color */
+    text-transform: uppercase; /* Make the text all uppercase for emphasis */
+    letter-spacing: 2px; /* Slightly increase space between letters */
+    margin-top: 40px; /* Space above the header */
+    margin-bottom: 20px; /* Space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    line-height: 1.4; /* Adjust line height for readability */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+h1:hover {
+    color: #e74c3c; /* Change color on hover for a dynamic effect */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight movement upwards on hover */
+}
+
+button {
+    background-color: #6A0DAD; /* Royal Purple button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4B0082; /* Dark Purple hover */
+}
+
+       
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            gap: 50px;
+            max-width: 100%; /* Increase container width */
+            padding: 0 10px;
+        }
+
+        .product {
+            background-color: #fff;
+            width: 100%; /* Take up full width available */
+            max-width: 600px; /* Increase product card width */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: left; /* Align text to the left */
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            color:#003366;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font */
+    font-size: 1.125em;  /* Slightly larger text for readability */
+    line-height: 1.6;  /* Space between lines */
+    color: #333;  /* Dark grey text for easy reading */
+    margin: 20px 0;  /* Margin for spacing above and below paragraphs */
+    padding: 10px;  /* Padding inside the paragraph */
+    background-color: #f9f9f9;  /* Light background color */
+    border-left: 5px solid #007bff;  /* Blue left border */
+    text-align: justify;  /* Justify text for a clean look */
+    text-indent: 20px;  /* Indent the first line */
+    letter-spacing: 0.5px;  /* Slightly increased letter spacing */
+    word-spacing: 1px;  /* Adds space between words */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Light text shadow */
+}
+
+.product-image {
+    width: 100%; /* Ensures responsiveness */
+    height: 50%; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover; /* Ensures the image covers the container fully */
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Optional: Add a border or frame around the image */
+.product-image-frame {
+    border: 2px solid #ddd; /* Light border */
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block; /* Contain the image in a block */
+    background-color: #fff; /* White background for a clean look */
+}
+
+footer {
+            background-color: #2c3e50;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 100px;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #3498db;
+        }
+        .social-icons img {
+            width: 25px;
+            margin: 0 10px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5em; /* Adjust header size */
+        margin-top: 30px;
+    }
+
+    .container {
+        padding: 0 10px; /* Padding for better spacing */
+        gap: 50px; /* Reduce gap between items */
+    }
+
+    .product {
+        width: 80%; /* Make product cards take more width */
+        padding: 20px; /* Less padding */
+    }
+
+    .product-image {
+        width: 80%; /* Make product image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller header font */
+        margin-top: 20px;
+        
+    }
+  
+
+    .container {
+        padding: 0 5px; /* Reduce padding on smaller screens */
+        gap: 40px;
+    }
+
+    .product {
+        width: 100%; /* Make the product take full width */
+        padding: 15px;
+    }
+
+    .product-image {
+        width: 80%; /* Make product image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    p {
+        font-size: 1em; /* Reduce font size for smaller screens */
+        margin: 15px 0; /* Adjust margin */
+        
+    }
+
+    button {
+        font-size: 1em; /* Adjust button size for mobile */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+/* For very small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller header font */
+        margin-top: 10px;
+    }
+   
+
+    .container {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .product {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    p {
+        font-size: 0.9em; /* Further reduce text size */
+        
+    }
+
+    button {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+}
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Alaabta Guriga ee Casriga ah: Xulashooyin Qurux Badan</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Nadiifiye Qasacadeed oo Jilicsan (Kenmore 600 Series)</h2>
+            <img class="product-image" src="img/robovacuum.webp" alt="Product Image">
+            <p>Nadiifiyahan wuxuu leeyahay naqshad jilicsan oo fudud, oo wata Pop-N-Go burush gaar ah oo loogu talagalay timaha xayawaanka. Waxay leedahay laba matoor, HEPA filter, iyo gacmo aluminium ah oo la fidin karo. Waxay ku timaaddaa suunka dib-u-celinta leh iyo afar qalab oo nadiifin ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Cushion gudaha ah oo labajibbaaran (Siluvia 20"x20")</h2>
+            <img class="product-image" src="img/silluvia.webp" alt="Product Image">
+            <p>Labo barkin gudaha ah oo cabbirkoodu yahay 20"x20", ku habboon sariiraha fadhiga iyo kuraasta gudaha. Barkimaha ayaa laga sameeyay walxo tayo sare leh oo cad, taas oo ka dhigaysa mid qurux iyo raaxo leh.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Dhalooyinka Dhalada Dhoobada ah (Ceramic Vase)</h2>
+            <img class="product-image" src="img/vase.jpg" alt="Product Image">
+            <p>Labo dhalo oo laga sameeyay dhoobo oo leh naqshad casri ah iyo qaab ubax cad. Waxay ku habboon yihiin qurxinta guryaha qaabka Nordic Boho iyo naqshada beeralayda casriga ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Dresser-Drawer Huuger oo leh 9 Khaanadood</h2>
+            <img class="product-image" src="img/dresser.jpg" alt="Product Image">
+            <p>Miiskani waa mid aad u weyn oo dhererkiisu yahay 63 inch, ku habboon TV-yada cabbirradoodu yahay 55 ilaa 70 inch. Waxay leedahay 9 khaanadood oo raaxo leh oo loogu talagalay kaydinta agabka iyo qalabka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Humidifier Dreo 6L oo loogu talagalay Qolka Jiifka</h2>
+            <img class="product-image" src="img/humidifier.webp" alt="Product Image">
+            <p>Humidifier-kan wuxuu bixiya uumiga diiran iyo qabow, isagoo leh awood uu socon karo 60 saacadood. Waxaa ku jira daahfurnaan, iftiin tilmaame ah, iyo waafajin Google/Alexa ah.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Buste Qafiif ah oo Xilli Walba EASELAND</h2>
+            <img class="product-image" src="img/duve.webp" alt="Product Image">
+            <p>Buste jilicsan oo tayo sare leh, leh laba dhinac oo la rogi karo. Waxay ku timaaddaa cabbirka boqoradda (Queen Size) waxaana loogu talagalay isticmaalka xagaaga iyo jiilaalka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Barkinta Isku-dhafka ah ee Coop Home Goods</h2>
+            <img class="product-image" src="img/comfort.jpg" alt="Product Image">
+            <p>Barkinta oo ah cabbirka boqoradda (Queen Size), laga sameeyay xumbo xusuusta oo la jarjaray. Waxay bixisaa taageero dhexdhexaad ah oo ku habboon dhabarka, caloosha, iyo dhinacyada hurda.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Mashiinka Nadiifinta Sagxadaha Tineco iFLOOR 5</h2>
+            <img class="product-image" src="img/steamclean.webp" alt="Product Image">
+            <p>Mashiinkan cusub ee cordless-ka ah wuxuu isku daraa nadiifinta qoyan iyo qallalan ee sagxadaha adag. Waxay leedahay shaqo is-nadiifin ah oo si fudud loo isticmaali karo.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>Joodari Fuli oo la Isku Laabi Karo</h2>
+            <img class="product-image" src="img/japanese.webp" alt="Product Image">
+            <p>Joodarigan Japan-ka ah ayaa ah mid la isku laabi karo oo fudud in la qaado. Waxaa loogu talagalay hurdo raaxo leh oo dusha sagxadda ah ama socdaalka.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+        <div class="card">
+            <h2>INTEX Air Mattress oo leh Barkin Koronto Lagu Buufiyo</h2>
+            <img class="product-image" src="img/airmattress.webp" alt="Product Image">
+            <p>Joodari hawada ah oo cabbirkoodu yahay Twin Size, oo leh matoor koronto oo lagu buufiyo. Waxay leedahay dherer 18 inch ah iyo awood ay qaado culeyska 300lb.</p>
+            <a href="https://www.amazon.com" target="_blank"><button class="button">Fiiri Qiimaha Amazon</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dharka Ragga. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>

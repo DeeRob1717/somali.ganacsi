@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xisaabinta Cashuuraha Kastamka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #add8e6, #ffffff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #800000;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #990000;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e7f3e7;
+            border: 1px solid #d4e7d4;
+            color: #2e7d32;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <span class="menu-icon">&#9776;</span>
+
+    <div class="header">
+        <h1>Xisaabinta Cashuuraha Kastamka ee Soo Dejinta Alaabta Gudaha Soomaaliya</h1>
+    </div>
+
+    <div class="container">
+        <label for="category">Dooro Qaybta Alaabta:</label>
+        <select id="category">
+            <option value="">-- Select Category --</option>
+            <option value="0.05-0.25">Live Animals (5% to 25%)</option>
+            <option value="0.25">Meat and Edible Meat Offal (25%)</option>
+            <option value="0.25">Fish and Crustaceans (25%)</option>
+            <option value="0.35">Dairy Produce (35%)</option>
+            <option value="0.05-0.25">Products of Animal Origin (5% to 25%)</option>
+            <option value="0.25">Live Trees and Plants (25%)</option>
+            <option value="0.25">Edible Vegetables (25%)</option>
+            <option value="0.25">Edible Fruit and Nuts (25%)</option>
+            <option value="0.25">Coffee, Tea, Maté, and Spices (25%)</option>
+            <option value="0.05-0.35">Cereals (5% to 35%)</option>
+            <option value="0.05-0.25">Milling Industry Products (5% to 25%)</option>
+            <option value="0.10">Oil Seeds and Oleaginous Fruits (10%)</option>
+            <option value="0.05-0.15">Lac, Gums, Resins (5% to 15%)</option>
+            <option value="0.15">Vegetable Plaiting Materials (15%)</option>
+            <option value="0.05-0.25">Animal or Vegetable Fats and Oils (5% to 25%)</option>
+            <option value="0.25">Prepared Foodstuffs (25%)</option>
+            <option value="0.25">Beverages, Spirits, and Vinegar (25%)</option>
+            <option value="0.25">Tobacco and Manufactured Tobacco Substitutes (25%)</option>
+            <option value="0.05-0.15">Salt, Sulphur, Earths, and Stone (5% to 15%)</option>
+            <option value="0.05">Ores, Slag, and Ash (5%)</option>
+            <option value="0.05-0.25">Mineral Fuels, Oils, and Products (5% to 25%)</option>
+            <option value="0.05">Inorganic Chemicals (5%)</option>
+            <option value="0.05">Organic Chemicals (5%)</option>
+            <option value="0.05">Pharmaceutical Products (5%)</option>
+            <option value="0.05">Fertilizers (5%)</option>
+            <option value="0.05">Tanning or Dyeing Extracts (5%)</option>
+            <option value="0.25">Essential Oils and Resinoids (25%)</option>
+            <option value="0.15-0.25">Soap and Organic Surface-Active Agents (15% to 25%)</option>
+            <option value="0.05">Albuminoidal Substances (5%)</option>
+            <option value="0.05">Explosives and Pyrotechnic Products (5%)</option>
+            <option value="0.15">Photographic or Cinematographic Goods (15%)</option>
+            <option value="0.05">Miscellaneous Chemical Products (5%)</option>
+            <option value="0.25">Plastics and Articles Thereof (25%)</option>
+            <option value="0.05-0.15">Rubber and Articles Thereof (5% to 15%)</option>
+            <option value="0.15">Raw Hides and Skins, Leather (15%)</option>
+            <option value="0.25">Furskins and Artificial Fur (25%)</option>
+            <option value="0.05-0.25">Wood and Articles of Wood (5% to 25%)</option>
+            <option value="0.05-0.15">Cork and Articles of Cork (5% to 15%)</option>
+            <option value="0.25">Manufactures of Straw, Esparto, or Other Plaiting Materials (25%)</option>
+            <option value="0.05">Pulp of Wood or Other Fibrous Cellulosic Material (5%)</option>
+            <option value="0.05-0.25">Paper and Paperboard (5% to 25%)</option>
+            <option value="0.05-0.25">Printed Books, Newspapers, Pictures (5% to 25%)</option>
+            <option value="0.05-0.25">Silk (5% to 25%)</option>
+            <option value="0.15-0.25">Wool, Fine or Coarse Animal Hair (15% to 25%)</option>
+            <option value="0.15-0.25">Cotton (15% to 25%)</option>
+            <option value="0.05-0.25">Other Vegetable Textile Fibres (5% to 25%)</option>
+            <option value="0.15-0.25">Man-Made Filaments (15% to 25%)</option>
+            <option value="0.05-0.25">Man-Made Staple Fibres (5% to 25%)</option>
+            <option value="0.15-0.25">Wadding, Felt, and Nonwovens (15% to 25%)</option>
+            <option value="0.25">Carpets and Other Textile Floor Coverings (25%)</option>
+            <option value="0.25">Special Woven Fabrics (25%)</option>
+            <option value="0.25">Knitted or Crocheted Fabrics (25%)</option>
+            <option value="0.25">Articles of Apparel and Clothing Accessories (25%)</option>
+            <option value="0.25">Footwear, Gaiters, and the Like (25%)</option>
+            <option value="0.25">Headgear and Parts Thereof (25%)</option>
+            <option value="0.15-0.25">Umbrellas, Sun Umbrellas, Walking-Sticks (15% to 25%)</option>
+            <option value="0.25">Prepared Feathers and Down (25%)</option>
+            <option value="0.25">Articles of Stone, Plaster, Cement, Asbestos (25%)</option>
+            <option value="0.05-0.25">Ceramic Products (5% to 25%)</option>
+            <option value="0.05-0.25">Glass and Glassware (5% to 25%)</option>
+            <option value="0.25">Natural or Cultured Pearls, Precious or Semi-Precious Stones (25%)</option>
+            <option value="0.05-0.25">Base Metals and Articles of Base Metal (5% to 25%)</option>
+            <option value="0.05-0.25">Machinery and Mechanical Appliances (5% to 25%)</option>
+            <option value="0.05-0.25">Electrical Machinery and Equipment (5% to 25%)</option>
+            <option value="0.05-0.25">Vehicles, Aircraft, Vessels, and Associated Transport Equipment (5% to 25%)</option>
+            <option value="0.05-0.25">Optical, Photographic, Cinematographic, Measuring, Checking, Precision, Medical, or Surgical Instruments (5% to 25%)</option>
+            <option value="0.25">Clocks and Watches and Parts Thereof (25%)</option>
+            <option value="0.15">Musical Instruments (15%)</option>
+            <option value="0.25">Arms and Ammunition (25%)</option>
+            <option value="0.25">Furniture, Bedding, Mattresses (25%)</option>
+            <option value="0.25">Toys, Games, and Sports Requisites (25%)</option>
+            <option value="0.25">Miscellaneous Manufactured Articles (25%)</option>
+            <option value="0.25">Works of Art, Collectors' Pieces, and Antiques (25%)</option>
+        </select>
+
+        <label for="goodsValue">Qiimaha Alaabta (USD):</label>
+        <input type="number" id="goodsValue" placeholder="Geli qiimaha alaabta">
+
+        <button onclick="calculateDuty()">Xisaabi Cashuurta</button>
+
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        function calculateDuty() {
+            const category = document.getElementById("category").value.trim();
+            const goodsValue = parseFloat(document.getElementById("goodsValue").value);
+
+            const resultDiv = document.getElementById("result");
+
+            if (!category || isNaN(goodsValue) || goodsValue <= 0) {
+                resultDiv.style.display = "block";
+                resultDiv.textContent = "Fadlan dooro qaybta alaabta oo geli qiime sax ah.";
+                resultDiv.style.color = "red";
+                return;
+            }
+
+            let [minRate, maxRate] = category.split("-").map(parseFloat);
+            if (isNaN(maxRate)) maxRate = minRate; // Handle fixed rates
+
+            const avgRate = ((minRate + maxRate) / 2) || minRate;
+            const customDuty = goodsValue * avgRate;
+
+            resultDiv.style.display = "block";
+            resultDiv.style.color = "#2e7d32";
+            resultDiv.innerHTML = `
+                Qaybta Alaabta: <strong>${document.getElementById("category").selectedOptions[0].text}</strong><br>
+                Qiimaha Alaabta: $${goodsValue.toFixed(2)}<br>
+                Heerka Celceliska Cashuurta: ${(avgRate * 100).toFixed(2)}%<br>
+                <strong>Wadarta Cashuurta: $${customDuty.toFixed(2)}</strong>
+            `;
+        }
+    </script>
+</body>
+</html>
